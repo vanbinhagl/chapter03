@@ -8,6 +8,7 @@
     <title>
       <%= (typeof title != "undefined" ? title : "Page title") %>
     </title>
+    <link href="https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&display=swap" rel="stylesheet">
     {{ meta }}
     <script type="module" src="/_scss/style.js"></script>
     {{ head }}
@@ -18,7 +19,7 @@
 
     {{ content }}
 
-    <%- include('_partials/footer'); -%>
+    <!-- <%- include('_partials/footer'); -%> -->
 
     {{ script }}
     <script src="/assets/js/main.js"></script>

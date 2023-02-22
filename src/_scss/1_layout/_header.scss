@@ -1,29 +1,29 @@
 /* Header
 ------------------------------------------------------------*/
 .c-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    position: relative;
-    background: rgba(255, 255, 255, 0.9);
+    position: absolute;
+    color: #fff;
+    top: 65px;
+    left: 0;
+    z-index: 9999;
+
+    .c-header__navitem {
+        margin-bottom: 15px;
+    }
+
+    .c-header__navlink {
+        display: block;
+        background-image: url("/assets/img/menubg.jpg");
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 198px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        font-size: 1.6rem;
+        padding-left: 20px;
+        letter-spacing: 1.4px;
+    }
 }
 /* Main menu
 ------------------------------------------------------------*/
-.c-gnav {
-    ul {
-    }
-
-    li {
-        display: inline-block;
-
-        + li {
-            margin-left: 20px;
-        }
-    }
-
-    a {
-        font-size: 1.6rem;
-        text-transform: capitalize;
-    }
-}

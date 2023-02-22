@@ -1,39 +1,171 @@
 <%- include('_layouts/layout', { title: 'Home page' }); -%>
 
 <!-- @meta -->
-<meta name="description" content="Home page">
+<meta name="description" content="Home page" />
 <!-- @@meta -->
 
 <!-- @content -->
-<main class="p-top">
-  <section class="c-mainvisual">
-    <div class="c-mainvisual__inner">
-      <h2>LOREM IPSUM</h2>
-      <p>In volutpat metus quis velit malesuada</p>
-      <a href="<%= BASE_URL %>about.html" class="c-btn1">JOIN NOW</a>
-    </div>
-  </section>
+<main class="p-home">
+  <div class="p-home__content">
+    <!-- BANNER SECTION -->
+    <section class="c-banner">
+      <div class="c-banner__content l-container">
+        <img src="/assets/img/banner.png" alt="" />
+        <div class="c-banner__info">
+          <h1 class="c-banner__prodname">
+            <img src="./assets/img/banner-text.png" alt="" />
+          </h1>
+          <hr class="c-banner__line" />
+          <h2 class="c-banner__prodname--eng">MENTHA OIL</h2>
 
-  <section class="p-top1">
-    <div class="l-container">
-      <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis
-        dolorem eaque minima deleniti dicta doloremque ut, officiis odit tempora
-        culpa mollitia ipsa quas quibusdam. Voluptate illo nam delectus
-        reprehenderit laborum?
-        <br>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis
-        dolorem eaque minima deleniti dicta doloremque ut, officiis odit tempora
-        culpa mollitia ipsa quas quibusdam. Voluptate illo nam delectus
-        reprehenderit laborum?
-        <br>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis
-        dolorem eaque minima deleniti dicta doloremque ut, officiis odit tempora
-        culpa mollitia ipsa quas quibusdam. Voluptate illo nam delectus
-        reprehenderit laborum?
-      </p>
-    </div>
-  </section>
+          <div class="c-slogan">
+            <p class="c-slogan--sub">ハッカ油は、毎日の暮らしを豊かにする</p>
+            <p class="c-slogan--main">魔法のしずく</p>
+          </div>
+
+          <a class="c-ctabutton" href="#">ハッカ？ミント？</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- USER MANUAL -->
+    <section class="c-product l-container">
+      <div class="c-product__header">
+        <p class="c-product__header c-product__header--sub">使い方いろいろ</p>
+        <h2 class="c-product__header c-product__header--main">
+          毎日にハッカ油
+        </h2>
+      </div>
+
+      <div class="c-product__list">
+        <div class="c-product__item">
+          <a href="#">
+            <div class="c-product__link">
+              <figure class="c-product__images">
+                <img src="/assets/img/daily.png" alt="ハッカ水" />
+                <img
+                  class="c-product__image c-product__image--figure"
+                  src="/assets/img/pro1.png"
+                  alt="ハッカ水"
+                />
+              </figure>
+              <span class="c-product__label c-product__label--images"
+                >ハッカ水</span
+              >
+            </div>
+          </a>
+        </div>
+        <div class="c-product__item">
+          <a href="#">
+            <div class="c-product__link">
+              <img
+                class="c-product__image c-product__image--figure"
+                src="/assets/img/pro2.png"
+                alt="ハッカ水"
+              />
+              <span class="c-product__label c-product__label--daily"
+                >ハッカの虫除けスプレー</span
+              >
+            </div>
+          </a>
+        </div>
+        <div class="c-product__item">
+          <a href="#">
+            <div class="c-product__link">
+              <img
+                class="c-product__image c-product__image--figure"
+                src="/assets/img/pro3.png"
+                alt="ハッカ水"
+              />
+              <span class="c-product__label c-product__label--daily"
+                >ハッカのリネンウォーター</span
+              >
+            </div>
+          </a>
+        </div>
+        <div class="c-product__item">
+          <a href="#">
+            <div class="c-product__link">
+              <figure class="c-product__images">
+                <img src="/assets/img/daily.png" alt="ハッカ水" />
+                <img
+                  class="c-product__image c-product__image--figure"
+                  src="/assets/img/pro4.png"
+                  alt="ハッカ水"
+                />
+              </figure>
+              <span class="c-product__label c-product__label--images"
+                >ハッカのエアフレッシュナー</span
+              >
+            </div>
+          </a>
+        </div>
+
+        <div class="c-product__item">
+          <a href="#">
+            <div class="c-product__link">
+              <img
+                class="c-product__image c-product__image--figure"
+                src="/assets/img/pro5.png"
+                alt="ハッカ水"
+              />
+              <span class="c-product__label c-product__label--daily"
+                >ハッカの清涼スプレー</span
+              >
+            </div>
+          </a>
+        </div>
+
+        <div class="c-product__item">
+          <a href="#">
+            <div class="c-product__link c-product__link--item6">
+              <figure class="c-product__images">
+                <img src="/assets/img/recommend.png" alt="ハッカ水" />
+                <img
+                  class="c-product__image c-product__image--recommend"
+                  src="/assets/img/pro6.png"
+                  alt="ハッカ水"
+                />
+              </figure>
+              <span class="c-product__label c-product__label--images c-product__label--item6"
+                >ハッカマスク</span
+              >
+            </div>
+          </a>
+        </div>
+
+        <div class="c-product__item">
+          <a href="#">
+            <div class="c-product__link c-product__link--item7">
+              <img
+                class="c-product__image c-product__image--figure"
+                src="/assets/img/pro7.png"
+                alt="ハッカ水"
+              />
+              <span class="c-product__label c-product__label--daily c-product__label--item7"
+                >ハッカで安息</span
+              >
+            </div>
+          </a>
+        </div>
+
+        <div class="c-product__item">
+          <a href="#">
+            <div class="c-product__link ">
+              <img
+                class="c-product__image c-product__image--figure"
+                src="/assets/img/pro8.png"
+                alt="ハッカ水"
+              />
+              <span class="c-product__label c-product__label--daily"
+                >ハッカの入浴剤</span
+              >
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+  </div>
 </main>
 <!-- @@content -->
 
