@@ -1,0 +1,169 @@
+/*------------------------------------------------------------
+usage
+------------------------------------------------------------*/
+
+/*
+------------------------------------------------------------*/
+.c-usage {
+    background: url("/assets/img/usagebg.jpg");
+    margin-top: 182px;
+    padding: 100px 0 108px;
+
+    // Block
+    .c-usage__pointblock {
+        margin-bottom: 108px;
+    }
+
+    .c-usage__header {
+        display: flex;
+        padding: 0 0 0 121px;
+    }
+
+    .c-usage__number {
+        margin-right: 27px;
+    }
+
+    .c-usage__line {
+        background-color: rgb(0, 0, 0);
+        width: 35px;
+        height: 2px;
+        margin-top: 18px;
+        margin-right: 27px;
+    }
+
+    .c-usage__label {
+        font-size: 2.2rem;
+        text-transform: uppercase;
+    }
+
+    .c-usage__mainheader {
+        font-size: 3.6rem;
+        line-height: 1.22;
+        letter-spacing: 3.6px;
+        margin-bottom: 18px;
+    }
+
+    .c-usage__subheader {
+        letter-spacing: 1.4px;
+        line-height: 1.5;
+        margin-top: 5px;
+        margin-left: 3px;
+    }
+
+    .c-usage__images {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 50px;
+    }
+
+    .c-usage__imageitem {
+        position: relative;
+        width: 330px;
+        height: 330px;
+        border-radius: 30px;
+        background-color: rgb(175, 212, 211);
+        overflow: hidden;
+    }
+
+
+
+    .c-usage__viewmore {
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+        z-index: 10;
+        transition: opacity 0.3s;
+        cursor: pointer;
+
+        &:hover {
+            opacity: 0.7;
+        }
+    }
+
+    .c-usage__imageconent {
+        position: absolute;
+        text-align: center;
+        padding: 51px 45px;
+        border-radius: 26px;
+        background-color: rgba(255, 255, 255, 0.8);
+        width: 290px;
+        height: 290px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: none;
+        z-index: 11;
+    }
+
+    .c-usage__imgheader {
+        font-size: 2.4rem;
+        letter-spacing: 2.4px;
+        line-height: 1;
+    }
+
+    .c-usage__imgline {
+        width: 50px;
+        height: 1px;
+        background-color: rgb(23, 107, 106);
+        margin-top: 16px;
+    }
+
+    .c-usage__imgdes {
+        font-size: 1.2rem;
+        letter-spacing: 1.2px;
+        line-height: 1.8;
+        font-feature-settings: "palt";
+        margin-top: 10px;
+        text-align: left;
+    }
+
+    .c-usage__imglink {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: url("./assets/img/menubg.jpg");
+        background-repeat: no-repeat;
+        margin: 30px 0 0 1px;
+        width: 198px;
+        height: 40px;
+        font-size: 1.6rem;
+        color: #fff;
+        letter-spacing: 1.6px;
+    }
+
+    // Brand and how to buy
+    .c-usage__headerbot {
+        font-size: 3rem;
+        letter-spacing: 3px;
+        text-align: center;
+        line-height: 1.2;
+        transform: translate(-1px, -1px);
+    }
+
+    .c-usage__brands {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1100px;
+        margin: 44px auto 0;
+    }
+
+    .c-usage__brandlogo {
+        width: 260px;
+        height: 110px;
+        display: block;
+    }
+
+    .c-usage__brandweb {
+        font-size: 1.2rem;
+        letter-spacing: 1.4px;
+        color: #333;
+        text-align: center;
+        margin-top: 47px;
+    }
+
+    .is-showContent {
+        display: block;
+    }
+}

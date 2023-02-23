@@ -126,11 +126,20 @@ using
         &--item2 {
             top: -28px;
             left: 41px;
+
+            .c-product__image,
+            .c-product__label {
+                transform: translateX(3px);
+            }
         }
 
         &--item3 {
             top: -28px;
             left: 58px;
+
+            .c-product__image {
+                transform: translateX(3px);
+            }
         }
 
         &--item4 {
@@ -146,6 +155,10 @@ using
         &--item6 {
             top: 61px;
             left: 56px;
+
+            .c-product__image6 {
+                transform: translateY(-1px);
+            }
         }
 
         &--item7 {
@@ -156,6 +169,10 @@ using
         &--item8 {
             left: -85px;
             bottom: 38px;
+
+            .c-product__image {
+                transform: translateX(5px);
+            }
         }
     }
 }

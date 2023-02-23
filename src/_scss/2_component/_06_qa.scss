@@ -1,0 +1,45 @@
+/*------------------------------------------------------------
+Q&A
+------------------------------------------------------------*/
+
+/*
+------------------------------------------------------------*/
+
+.c-qa {
+    .c-qa__container {
+        padding: 77px 77px 61px;
+    }
+
+    .c-qa__header {
+        text-align: center;
+        font-size: 3.6rem;
+        letter-spacing: 3.6px;
+    }
+
+    .c-qa__content {
+        margin-top: 42px;
+        padding: 0 8px;
+    }
+
+    .c-qa__questionitem {
+        padding-bottom: 47px;
+    }
+
+    .c-qa__question {
+        display: flex;
+        align-items: center;
+    }
+
+    .c-qa__questionconent {
+        margin-left: 15px;
+        font-size: 1.4rem;
+        letter-spacing: 1.4px;
+    }
+
+    .c-qa__answer {
+        margin-top: 5px;
+        color: #333;
+        font-size: 1.4rem;
+        letter-spacing: 1.4px;
+    }
+}
