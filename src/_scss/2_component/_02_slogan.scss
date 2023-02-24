@@ -2,22 +2,46 @@
 slogan
 ------------------------------------------------------------*/
 
-
 /*
 ------------------------------------------------------------*/
 .c-slogan {
-    margin-bottom: 30px;
+    margin-bottom: 28px;
     transform: translate(-9px, -8px);
     font-feature-settings: "palt";
 
     &--sub {
         font-size: 1.6rem;
         letter-spacing: 1.6px;
-
     }
 
     &--main {
         font-size: 3rem;
         letter-spacing: 3px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .c-slogan {
+        &--sub {
+            font-size: 1.5rem;
+        }
+
+        &--main {
+            font-size: 2rem;
+        }
+    }
+}
+@media screen and (max-width: 768px) {
+    .c-slogan {
+        width: 300px;
+        transform: translate(10px, -15px);
+
+        &--sub {
+            letter-spacing: 0;
+        }
+
+        &--main {
+            letter-spacing: 0;
+        }
     }
 }

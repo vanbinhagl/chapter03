@@ -17,5 +17,19 @@ btn
     border-radius: 27.5px;
     letter-spacing: 6px;
     font-feature-settings: "palt";
-    transform: translate(0, -17px);
+    transform: translate(-5px, -17px);
+}
+
+
+@media  screen and (max-width: 1024px) {
+    .c-ctabutton {
+        font-size: 1.6rem;
+        width: 200px;
+        height: 35px;
+    }
+}
+@media  screen and (max-width: 768px) {
+    .c-ctabutton {
+        transform: translate(9px, -18px);
+    }
 }

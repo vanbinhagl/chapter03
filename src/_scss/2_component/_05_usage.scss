@@ -6,12 +6,13 @@ usage
 ------------------------------------------------------------*/
 .c-usage {
     background: url("/assets/img/usagebg.jpg");
-    margin-top: 182px;
+    margin-top: 154px;
     padding: 100px 0 108px;
 
     // Block
     .c-usage__pointblock {
         margin-bottom: 108px;
+        padding: 0 15px;
     }
 
     .c-usage__header {
@@ -52,21 +53,25 @@ usage
 
     .c-usage__images {
         display: flex;
-        justify-content: space-between;
-        align-items: center;
+        column-gap: 20px;
         margin-top: 50px;
+
+        @include sp {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            row-gap: 20px;
+        }
     }
 
     .c-usage__imageitem {
         position: relative;
-        width: 330px;
-        height: 330px;
+        flex: 1 1 330px;
+        height: auto;
         border-radius: 30px;
         background-color: rgb(175, 212, 211);
         overflow: hidden;
     }
-
-
 
     .c-usage__viewmore {
         position: absolute;
@@ -83,17 +88,26 @@ usage
 
     .c-usage__imageconent {
         position: absolute;
-        text-align: center;
-        padding: 51px 45px;
         border-radius: 26px;
         background-color: rgba(255, 255, 255, 0.8);
-        width: 290px;
-        height: 290px;
+        width: 87.8%;
+        height: 87.8%;
+
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
         display: none;
         z-index: 11;
+    }
+
+    .c-usage__imagecontainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+        padding: 0 45px;
     }
 
     .c-usage__imgheader {
@@ -106,7 +120,7 @@ usage
         width: 50px;
         height: 1px;
         background-color: rgb(23, 107, 106);
-        margin-top: 16px;
+        margin-top: 17px;
     }
 
     .c-usage__imgdes {
@@ -114,7 +128,7 @@ usage
         letter-spacing: 1.2px;
         line-height: 1.8;
         font-feature-settings: "palt";
-        margin-top: 10px;
+        margin-top: 2px;
         text-align: left;
     }
 
@@ -133,6 +147,10 @@ usage
     }
 
     // Brand and how to buy
+    .c-usage__bottom {
+        padding: 0 15px;
+    }
+
     .c-usage__headerbot {
         font-size: 3rem;
         letter-spacing: 3px;
@@ -144,13 +162,12 @@ usage
     .c-usage__brands {
         display: flex;
         justify-content: space-between;
-        align-items: center;
-        max-width: 1100px;
+        column-gap: 20px;
+        max-width: 1120px;
         margin: 44px auto 0;
     }
 
     .c-usage__brandlogo {
-        width: 260px;
         height: 110px;
         display: block;
     }

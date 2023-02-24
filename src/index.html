@@ -1,19 +1,32 @@
-<%- include('_layouts/layout', { title: 'Home page' }); -%>
+<%- include('_layouts/layout', { title: 'Mentha Oil' }); -%>
 
 <!-- @meta -->
-<meta name="description" content="Home page" />
+<meta name="description" content="Mentha oil home page" />
 <!-- @@meta -->
 
 <!-- @content -->
 <main class="p-home">
   <div class="p-home__content">
     <!-- BANNER SECTION -->
-    <section class="c-banner">
+    <section class="c-banner" id="banner">
       <div class="c-banner__content l-container">
-        <img src="/assets/img/banner.png" alt="" />
+        <picture>
+          <source
+            media="(max-width: 767px)"
+            srcset="./assets/img/banner-sp.jpg"
+          />
+          <img src="./assets/img/banner.png" alt="" />
+        </picture>
+
         <div class="c-banner__info">
           <h1 class="c-banner__prodname">
-            <img src="./assets/img/banner-bran.png" alt="" />
+            <picture>
+              <source
+                media="(max-width: 767px)"
+                srcset="./assets/img/banner-brand-sp.png"
+              />
+              <img src="./assets/img/banner-bran.png" alt="" />
+            </picture>
           </h1>
 
           <div class="c-slogan">
@@ -27,230 +40,123 @@
     </section>
 
     <!-- PRODUCT LIST -->
-    <section class="c-product l-container">
+    <section class="c-product l-container" id="product">
       <div class="c-product__header">
-        <p class="c-product__header c-product__header--sub">使い方いろいろ</p>
-        <h2 class="c-product__header c-product__header--main">
-          毎日にハッカ油
-        </h2>
+        <p class="c-product__header c-product__subheader">使い方いろいろ</p>
+        <h2 class="c-product__header c-product__mainheader">毎日にハッカ油</h2>
       </div>
 
-      <div class="c-product__list">
-        <a href="#" class="c-product__item c-product__item--item1">
-          <figure class="c-product__images">
-            <img src="/assets/img/daily.png" alt="ハッカ水" />
+      <div class="c-product__body">
+        <div class="c-product__list">
+          <a href="#" class="c-product__item">
+            <picture>
+              <source
+                media="(max-width: 767px)"
+                srcset="./assets/img/pro1-sp.png"
+                alt="ハッカ水"
+              />
+              <img
+                class="c-product__image"
+                src="/assets/img/pro1.png"
+                alt="ハッカ水"
+              />
+            </picture>
+            <span class="c-product__label">ハッカ水</span>
+          </a>
+          <a href="#" class="c-product__item">
             <img
-              class="c-product__image c-product__image--figure"
-              src="/assets/img/pro1.png"
+              class="c-product__image"
+              src="/assets/img/pro2.png"
               alt="ハッカ水"
             />
-          </figure>
-          <span class="c-product__label c-product__label--item1">ハッカ水</span>
-        </a>
-        <a href="#" class="c-product__item c-product__item--item2">
-          <img
-            class="c-product__image c-product__image--figure"
-            src="/assets/img/pro2.png"
-            alt="ハッカ水"
-          />
-          <span class="c-product__label c-product__label--item2"
-            >ハッカの虫除けスプレー</span
-          >
-        </a>
-        <a href="#" class="c-product__item c-product__item--item3">
-          <img
-            class="c-product__image c-product__image--figure"
-            src="/assets/img/pro3.png"
-            alt="ハッカ水"
-          />
-          <span class="c-product__label c-product__label--item3"
-            >ハッカのリネンウォーター</span
-          >
-        </a>
-        <a href="#" class="c-product__item c-product__item--item4">
-          <figure class="c-product__images">
-            <img src="/assets/img/daily.png" alt="ハッカ水" />
+            <span class="c-product__label">ハッカの虫除けスプレー</span>
+          </a>
+          <a href="#" class="c-product__item">
             <img
-              class="c-product__image c-product__image--figure"
+              class="c-product__image"
+              src="/assets/img/pro3.png"
+              alt="ハッカ水"
+            />
+            <span class="c-product__label">ハッカのリネンウォーター</span>
+          </a>
+          <a href="#" class="c-product__item">
+            <img
+              class="c-product__image"
               src="/assets/img/pro4.png"
               alt="ハッカ水"
             />
-          </figure>
-          <span class="c-product__label c-product__label--item4"
-            >ハッカのエアフレッシュナー</span
-          >
-        </a>
-
-        <a href="#" class="c-product__item c-product__item--item5">
-          <img
-            class="c-product__image c-product__image--figure"
-            src="/assets/img/pro5.png"
-            alt="ハッカ水"
-          />
-          <span class="c-product__label c-product__label--item5"
-            >ハッカの清涼スプレー</span
-          >
-        </a>
-
-        <a href="#" class="c-product__item c-product__item--item6">
-          <figure class="c-product__images">
+            <span class="c-product__label">ハッカのエアフレッシュナー</span>
+          </a>
+        </div>
+        <div class="c-product__listbottom">
+          <a href="#" class="c-product__item">
             <img
-              src="/assets/img/recommend.png"
-              class="c-product__image6"
+              class="c-product__image"
+              src="/assets/img/pro5.png"
               alt="ハッカ水"
             />
+            <span class="c-product__label">ハッカの清涼スプレー</span>
+          </a>
+          <a href="#" class="c-product__item">
             <img
-              class="c-product__image c-product__image--recommend"
+              class="c-product__image"
               src="/assets/img/pro6.png"
               alt="ハッカ水"
             />
-          </figure>
-          <span class="c-product__label c-product__label--item6"
-            >ハッカマスク</span
-          >
-        </a>
-
-        <a href="#" class="c-product__item c-product__item--item7">
-          <img
-            class="c-product__image c-product__image--figure"
-            src="/assets/img/pro7.png"
-            alt="ハッカ水"
-          />
-          <span class="c-product__label c-product__label--item7"
-            >ハッカで安息</span
-          >
-        </a>
-
-        <a href="#" class="c-product__item c-product__item--item8">
-          <img
-            class="c-product__image c-product__image--figure"
-            src="/assets/img/pro8.png"
-            alt="ハッカ水"
-          />
-          <span class="c-product__label c-product__label--item8"
-            >ハッカの入浴剤</span
-          >
-        </a>
+            <span class="c-product__label">ハッカマスク</span>
+          </a>
+          <a href="#" class="c-product__item">
+            <img
+              class="c-product__image"
+              src="/assets/img/pro7.png"
+              alt="ハッカ水"
+            />
+            <span class="c-product__label">ハッカで安息</span>
+          </a>
+          <a href="#" class="c-product__item">
+            <img
+              class="c-product__image"
+              src="/assets/img/pro8.png"
+              alt="ハッカ水"
+            />
+            <span class="c-product__label">ハッカの入浴剤</span>
+          </a>
+        </div>
       </div>
     </section>
 
     <!-- USAGE -->
 
-    <section class="c-usage">
-      <div class="c-usage__content l-container l-container--min">
-        <!-- Block 1 -->
+    <section class="c-usage" id="usage">
+      <div class="c-usage__content l-container l-container--1060">
+        <% if(typeof usage !== 'undefined') { %> <% usage.main && usage.main.forEach((element, index) => { %>
         <div class="c-usage__pointblock">
           <div class="c-usage__header">
             <div class="c-usage__number">
-              <img src="/assets/img/num1.png" alt="number 1" />
+              <img src="<%= element.header.icon %>" alt="<%= "number"+index %>"/>
               <hr class="c-usage__line" />
               <p class="c-usage__label">point</p>
             </div>
             <div class="c-usage__headercontent">
-              <h2 class="c-usage__mainheader u-textblue">気持ちリフレッシュ</h2>
+              <h2 class="c-usage__mainheader u-textblue">
+                <%= element.header.mainHeader %>
+              </h2>
               <p class="c-usage__subheader">
-                鼻や口から入った香りの信号は、視床下部などに直接作用し
+                <%= element.header.subHeader.first %>
               </p>
               <p class="c-usage__subheader">
-                気分をリフレッシュさせてくれます。
+                <%= element.header.subHeader.second %>
               </p>
             </div>
           </div>
-          <div class="c-usage__images" id="c-usage__images1">
-            <div class="c-usage__imageitem">
-              <img src="./assets/img/point1-1.jpg" alt="部屋干しも安心" />
-              <img
-                class="c-usage__viewmore"
-                src="./assets/img/btn_more.png"
-                alt="btn_more"
-              />
-              <div class="c-usage__imageconent">
-                <h3 class="c-usage__imgheader u-textblue">部屋干しも安心</h3>
-                <hr class="c-usage__imgline" />
-                <p class="c-usage__imgdes">
-                  湿気の多い梅雨の季節の部屋干しにはハッカ油が大活躍！
-                  優しい自然な香りですっきりさわやか。
-                </p>
 
-                <a href="#" class="c-usage__imglink">ハッカ油コラムへ</a>
-              </div>
-            </div>
-            <div class="c-usage__imageitem">
-              <img src="./assets/img/point1-2.jpg" alt="気分転換に" />
-              <img
-                class="c-usage__viewmore"
-                src="./assets/img/btn_more.png"
-                alt="btn_more"
-              />
-              <div class="c-usage__imageconent">
-                <h3 class="c-usage__imgheader u-textblue">気分転換に</h3>
-                <hr class="c-usage__imgline" />
-                <p class="c-usage__imgdes">
-                  集中力が低下してきたときはハッカ油でリフレッシュ。気分もすっきり眠気覚ましに最適です。
-                </p>
-
-                <a href="#" class="c-usage__imglink">ハッカ油コラムへ</a>
-              </div>
-            </div>
-            <div class="c-usage__imageitem">
-              <img src="./assets/img/point1-3.jpg" alt="外出のお供に" />
-              <img
-                class="c-usage__viewmore"
-                src="./assets/img/btn_more.png"
-                alt="btn_more"
-              />
-              <div class="c-usage__imageconent">
-                <h3 class="c-usage__imgheader u-textblue">外出のお供に</h3>
-                <hr class="c-usage__imgline" />
-                <p class="c-usage__imgdes">
-                  遠足やピクニックで思いっきり遊んでも、ハッカ油のおしぼりをサッと取り出していつでも清潔。
-                </p>
-
-                <a href="#" class="c-usage__imglink">ハッカ油コラムへ</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Block 2 -->
-        <div class="c-usage__pointblock">
-          <div class="c-usage__header">
-            <div class="c-usage__number">
-              <img src="/assets/img/num2.png" alt="number 2" />
-              <hr class="c-usage__line" />
-              <p class="c-usage__label">point</p>
-            </div>
-            <div class="c-usage__headercontent">
-              <h2 class="c-usage__mainheader u-textblue">気持ちリフレッシュ</h2>
-              <p class="c-usage__subheader">
-                メントールの刺激ですっきりクールダウン。
-              </p>
-              <p class="c-usage__subheader">ミントの香りで気分も爽快！</p>
-            </div>
-          </div>
-          <div class="c-usage__images" id="c-usage__images2">
-            <div class="c-usage__imageitem">
-              <img src="./assets/img/point2-1.jpg" alt="スッと冷却" />
-              <img
-                class="c-usage__viewmore"
-                src="./assets/img/btn_more.png"
-                alt="btn_more"
-              />
-              <div class="c-usage__imageconent">
-                <h3 class="c-usage__imgheader u-textblue">スッと冷却</h3>
-                <hr class="c-usage__imgline" />
-                <p class="c-usage__imgdes">
-                  暑くて体に熱がこもりがちな暑い季節はハッカ油でクールダウン。心地の良い涼しさを味わえます。
-                </p>
-
-                <a href="#" class="c-usage__imglink">ハッカ油コラムへ</a>
-              </div>
-            </div>
+          <div class="c-usage__images">
+            <% element.content.forEach(el => { %>
             <div class="c-usage__imageitem">
               <img
                 class="u-imgfulfill"
-                src="./assets/img/point2-2.jpg"
-                alt="花粉の季節に"
+                src="<%=el.image %>"
+                alt="<%= el.mainHeader %>"
               />
               <img
                 class="c-usage__viewmore"
@@ -258,135 +164,35 @@
                 alt="btn_more"
               />
               <div class="c-usage__imageconent">
-                <h3 class="c-usage__imgheader u-textblue">花粉の季節に</h3>
-                <hr class="c-usage__imgline" />
-                <p class="c-usage__imgdes">
-                  ハッカマスクでブルーな気分も吹き飛ばしてくれます。
-                </p>
-
-                <a href="#" class="c-usage__imglink">ハッカ油コラムへ</a>
+                <div class="c-usage__imagecontainer">
+                  <h3 class="c-usage__imgheader u-textblue">
+                    <%= el.mainHeader %>
+                  </h3>
+                  <hr class="c-usage__imgline" />
+                  <p class="c-usage__imgdes"><%= el.description %></p>
+                  <a href="#" class="c-usage__imglink">ハッカ油コラムへ</a>
+                </div>
               </div>
             </div>
-            <div class="c-usage__imageitem">
-              <img src="./assets/img/point1-3.jpg" alt="足湯に" />
-              <img
-                class="c-usage__viewmore"
-                src="./assets/img/btn_more.png"
-                alt="btn_more"
-              />
-              <div class="c-usage__imageconent">
-                <h3 class="c-usage__imgheader u-textblue">足湯に</h3>
-                <hr class="c-usage__imgline" />
-                <p class="c-usage__imgdes">
-                  ひんやり爽快。ハッカ油で寝苦しい夜もすっきり。さわやかな香りで気分もリフレッシュ。
-                </p>
-
-                <a href="#" class="c-usage__imglink">ハッカ油コラムへ</a>
-              </div>
-            </div>
+            <% }) %>
           </div>
         </div>
-
-        <!-- Block 3 -->
-        <div class="c-usage__pointblock">
-          <div class="c-usage__header">
-            <div class="c-usage__number">
-              <img src="/assets/img/num3.png" alt="number 3" />
-              <hr class="c-usage__line" />
-              <p class="c-usage__label">point</p>
-            </div>
-            <div class="c-usage__headercontent">
-              <h2 class="c-usage__mainheader u-textblue">ハウスキーピング</h2>
-              <p class="c-usage__subheader">
-                ハッカ油に含まれるメントールは、お部屋のスッキリを演出。
-              </p>
-              <p class="c-usage__subheader">お家の害虫対策にもおすすめです。</p>
-            </div>
-          </div>
-          <div class="c-usage__images" id="c-usage__images3">
-            <div class="c-usage__imageitem">
-              <img
-                class="u-imgfulfill"
-                src="./assets/img/point3-1.jpg"
-                alt="嫌な害虫を撃退"
-              />
-              <img
-                class="c-usage__viewmore"
-                src="./assets/img/btn_more.png"
-                alt="btn_more"
-              />
-              <div class="c-usage__imageconent">
-                <h3 class="c-usage__imgheader u-textblue">嫌な害虫を撃退</h3>
-                <hr class="c-usage__imgline" />
-                <p class="c-usage__imgdes">
-                  キッチンなどに現れる嫌な害虫はハッカ油がシャットアウト！
-                  清涼感あふれる香りでお部屋を守ります。
-                </p>
-
-                <a href="#" class="c-usage__imglink">ハッカ油コラムへ</a>
-              </div>
-            </div>
-            <div class="c-usage__imageitem">
-              <img
-                class="u-imgfulfill"
-                src="./assets/img/point3-2.jpg"
-                alt="窓ガラスに"
-              />
-              <img
-                class="c-usage__viewmore"
-                src="./assets/img/btn_more.png"
-                alt="btn_more"
-              />
-              <div class="c-usage__imageconent">
-                <h3 class="c-usage__imgheader u-textblue">窓ガラスに</h3>
-                <hr class="c-usage__imgline" />
-                <p class="c-usage__imgdes">
-                  自然素材のハッカ油で手肌にも優しくハウスキーピング。手軽に作れるガラスクリーナーでピカピカに。
-                </p>
-
-                <a href="#" class="c-usage__imglink">ハッカ油コラムへ</a>
-              </div>
-            </div>
-            <div class="c-usage__imageitem">
-              <img src="./assets/img/point3-3.jpg" alt="シューピローに" />
-              <img
-                class="c-usage__viewmore"
-                src="./assets/img/btn_more.png"
-                alt="btn_more"
-              />
-              <div class="c-usage__imageconent">
-                <h3 class="c-usage__imgheader u-textblue">シューピローに</h3>
-                <hr class="c-usage__imgline" />
-                <p class="c-usage__imgdes">
-                  お部屋の悪臭にはハッカ油が迎え撃ち！
-                  嫌な匂いがこもりがちな靴にハッカ油のシューピローを。
-                </p>
-
-                <a href="#" class="c-usage__imglink">ハッカ油コラムへ</a>
-              </div>
-            </div>
-          </div>
-        </div>
+        <% }) %> <% } %>
       </div>
 
-      <!-- How to buy -->
       <div class="c-usage__bottom l-container">
         <h4 class="c-usage__headerbot u-textblue">
           お買い求めは全国のドラッグストア、またはこちらから
         </h4>
         <div class="c-usage__brands">
-          <a href="#" class="c-usage__brandlogo">
-            <img src="./assets/img/brand1.png" alt="amazon" />
+          <% if(typeof partner !== 'undefined') {%> <% partner.forEach(item => {%>
+          <a href="#" target="_blank" class="c-usage__brandlogo">
+            <img
+              src="<%= item.image %>"
+              alt="お買い求めは全国のドラッグストア、またはこちらから"
+            />
           </a>
-          <a href="#" class="c-usage__brandlogo">
-            <img src="./assets/img/brand3.png" alt="kenko" />
-          </a>
-          <a href="#" class="c-usage__brandlogo">
-            <img src="./assets/img/brand2.png" alt="lohaco" />
-          </a>
-          <a href="#" class="c-usage__brandlogo">
-            <img src="./assets/img/brand4.png" alt="other" />
-          </a>
+          <% }) %> <%}%>
         </div>
 
         <p class="c-usage__brandweb">
@@ -397,72 +203,28 @@
     </section>
 
     <!-- Q&A -->
-    <section class="c-qa l-container l-container--min">
+    <section class="c-qa l-container l-container--min" id="q&a">
       <div class="c-qa__container">
         <h2 class="c-qa__header u-textblue">Q&A</h2>
         <dl class="c-qa__content">
+          <% if (typeof questionList !== 'undefined' ) { %> <%questionList.forEach(item => { %>
           <div class="c-qa__questionitem">
             <dt class="c-qa__question">
-              <img src="./assets/img/question_icon.png" alt="question icon" />
-              <h3 class="c-qa__questionconent u-textblue">
-                虫除け対策に直接体や環境に噴きかけても良いですか？
+              <img src="./assets/img/question_icon.png" alt="Q&A" />
+              <h3 class="c-qa__questioncontent u-textblue">
+                <%= item.question %>
               </h3>
             </dt>
-            <dd class="c-qa__answer">
-              刺激が強過ぎる可能性がありますので、薄めて使用してください。また素材によっては変質(変色)するおそれがありますので注意してください。
-            </dd>
+            <dd class="c-qa__answer"><%= item.answer%></dd>
           </div>
-          <div class="c-qa__questionitem">
-            <dt class="c-qa__question">
-              <img src="./assets/img/question_icon.png" alt="question icon" />
-              <h3 class="c-qa__questionconent u-textblue">
-                体に使用する際の注意点は？
-              </h3>
-            </dt>
-            <dd class="c-qa__answer">
-              刺激作用があるため、目や目の周囲、粘膜等に付着しないように注意してください。
-            </dd>
-          </div>
-          <div class="c-qa__questionitem">
-            <dt class="c-qa__question">
-              <img src="./assets/img/question_icon.png" alt="question icon" />
-              <h3 class="c-qa__questionconent u-textblue">
-                ハッカ油アイテムを作る際に使用する量は紹介されている量を守らないといけませんか？
-              </h3>
-            </dt>
-            <dd class="c-qa__answer">
-              紹介している量はあくまでも目安になります。ただし、これ以上の量を加えると刺激が強過ぎる可能性があるので注意してください。
-            </dd>
-          </div>
-          <div class="c-qa__questionitem">
-            <dt class="c-qa__question">
-              <img src="./assets/img/question_icon.png" alt="question icon" />
-              <h3 class="c-qa__questionconent u-textblue">
-                使用期限はどのくらいですか？
-              </h3>
-            </dt>
-            <dd class="c-qa__answer">
-              パッケージ裏面に賞味期限を記載しています。遮光して、涼しい所に保管してください。
-            </dd>
-          </div>
-          <div class="c-qa__questionitem">
-            <dt class="c-qa__question">
-              <img src="./assets/img/question_icon.png" alt="question icon" />
-              <h3 class="c-qa__questionconent u-textblue">
-                ハッカ油は何からできたものですか？
-              </h3>
-            </dt>
-            <dd class="c-qa__answer">
-              ハッカ油とはハッカソウというミントを乾燥させて抽出した植物油のことです。
-            </dd>
-          </div>
+          <% }) %> <% } %>
         </dl>
       </div>
     </section>
 
     <!-- FEATURE -->
-    <section class="feature">
-      <div class="feature__content l-container l-container--min">
+    <section class="feature" id="feature">
+      <div class="feature__content l-container l-container--1060">
         <div class="c-feature__imgcontainer">
           <figure>
             <img
@@ -474,254 +236,85 @@
         </div>
 
         <div class="c-feature__body">
+          <% if (typeof feature !== 'undefined') { %> <% feature.forEach(item =>{ %>
+
           <div class="c-feature__item u-textdark">
-            <div class="c-feature__itemheader">
-              <div class="c-feature__itemimage">
-                <figure>
-                  <img
-                    src="./assets/img/feature11.jpg"
-                    alt="風邪やインフルエンザシーズンにもハッカ油"
-                  />
-                </figure>
+            <a href="#">
+              <div class="c-feature__itemheader">
+                <div class="c-feature__itemimage">
+                  <img src="<%= item.image %>" alt="<%= item.mainHeading %>" />
+                </div>
+                <div class="c-feature__heading">
+                  <h3 class="c-feature__subheading"><%= item.subHeading %></h3>
+                  <h2 class="c-feature__mainheading">
+                    <%= item.mainHeading %>
+                  </h2>
+                </div>
               </div>
+              <p class="c-feature__itemcontent"><%= item.content %></p>
 
-              <div class="c-feature__heading">
-                <h3 class="c-feature__subheading">風邪をひきやすい冬も安心</h3>
-                <h2 class="c-feature__mainheading">
-                  風邪やインフルエンザシーズンにもハッカ油
-                </h2>
-              </div>
-            </div>
-            <p class="c-feature__itemcontent">風邪をひきやすくなる冬、朝起きたら喉がガラガラなんていうことはありませんか？　実はこれ、夜寝ている間にウイルスが体内で増殖してしまった証拠かもしれません。寒さと乾燥の厳しい冬の風邪は、夜寝ている間に悪化しやすいといわれています。そんな季節に役立つハッカ油の使い方をご紹介します。</p>
-
-            <img class="c-feature__chevron" src="./assets/img/arrow-icon.png" alt="chevron right">
+              <img
+                class="c-feature__chevron"
+                src="./assets/img/arrow-icon.png"
+                alt="chevron right"
+              />
+            </a>
           </div>
-          <div class="c-feature__item u-textdark">
-            <div class="c-feature__itemheader">
-              <div class="c-feature__itemimage">
-                <figure>
-                  <img
-                    src="./assets/img/feature10.jpg"
-                    alt="ハッカ油を安全に使うためのルール"
-                  />
-                </figure>
-              </div>
-
-              <div class="c-feature__heading">
-                <h3 class="c-feature__subheading">万能だからこそ知っておこう</h3>
-                <h2 class="c-feature__mainheading">
-                  ハッカ油を安全に使うためのルール                </h2>
-              </div>
-            </div>
-            <p class="c-feature__itemcontent">防虫、消臭、除菌、リラックスなど、さまざまな効果が期待できるハッカ油は使えば使うほど万能で、生活のあらゆる場面で欠かせなくなってきます。しかし、だからこそ知っておきたいのがハッカ油を安全に使うためのルールです。ハッカ油ならではの性質に着目して、保管から具体的な使う上での注意点についてご紹介します。</p>
-
-            <img class="c-feature__chevron" src="./assets/img/arrow-icon.png" alt="chevron right">
-          </div>
-          <div class="c-feature__item u-textdark">
-            <div class="c-feature__itemheader">
-              <div class="c-feature__itemimage">
-                <figure>
-                  <img
-                    src="./assets/img/feature9.jpg"
-                    alt="ハッカ油の冷却パワーを上手に使おう"
-                  />
-                </figure>
-              </div>
-
-              <div class="c-feature__heading">
-                <h3 class="c-feature__subheading">涼しいオアシスタイム</h3>
-                <h2 class="c-feature__mainheading">
-                  ハッカ油の冷却パワーを上手に使おう
-                </h2>
-              </div>
-            </div>
-            <p class="c-feature__itemcontent">湯上りやスポーツの後など、熱のこもった体を手早くクールダウンしたい時もハッカ油の出番です。蒸発する際に周囲の熱を奪う性質があるので、さわやかな香りを放ちながらすっきりと冷却してくれます。いつでも手軽に使えるハッカ油の清涼スプレーの作り方を紹介しますので、まずは一本作ってみて、その効果をお試しあれ。</p>
-
-            <img class="c-feature__chevron" src="./assets/img/arrow-icon.png" alt="chevron right">
-          </div>
-          <div class="c-feature__item u-textdark">
-            <div class="c-feature__itemheader">
-              <div class="c-feature__itemimage">
-                <figure>
-                  <img
-                    src="./assets/img/feature8.jpg"
-                    alt="ハッカ油でリラックス&リフレッシュ
-                    "
-                  />
-                </figure>
-              </div>
-
-              <div class="c-feature__heading">
-                <h3 class="c-feature__subheading">気分転換の強い味方</h3>
-                <h2 class="c-feature__mainheading">
-                  ハッカ油でリラックス&リフレッシュ
-                </h2>
-              </div>
-            </div>
-            <p class="c-feature__itemcontent">疲れているのに寝付けない、試験勉強がはかどらない、楽しみな旅行も乗り物酔いで台なし……。そんな時こそ、ハッカ油でリラックス＆リフレッシュ。ハッカ油のさわやかな香りは濃度によって効果が異なり、しっかり使えば気分転換に、量を控えれば気持ちを落ち着かせる作用があります。状況に応じてうまく使い分けましょう。</p>
-
-            <img class="c-feature__chevron" src="./assets/img/arrow-icon.png" alt="chevron right">
-          </div>
-          <div class="c-feature__item u-textdark">
-            <div class="c-feature__itemheader">
-              <div class="c-feature__itemimage">
-                <figure>
-                  <img
-                    src="./assets/img/feature7.jpg"
-                    alt="ハッカ油の消臭マジック！"
-                  />
-                </figure>
-              </div>
-
-              <div class="c-feature__heading">
-                <h3 class="c-feature__subheading">嫌な匂いはサヨウナラ、ブーツや靴などに
-                </h3>
-                <h2 class="c-feature__mainheading">
-                  ハッカ油の消臭マジック！
-                </h2>
-              </div>
-            </div>
-            <p class="c-feature__itemcontent">ニオイ対策にも使用できるハッカ油は、お口の不快感対策の他、排水溝や下駄箱などで消臭剤としても活用できます。消臭スプレーや芳香剤の人工的な香りよりも、気持ち良く使える人が多いはず。体に優しいハッカ油の即席マウスケアや防臭シューピローを作って、ぜひ試してみてください。</p>
-
-            <img class="c-feature__chevron" src="./assets/img/arrow-icon.png" alt="chevron right">
-          </div>
-          <div class="c-feature__item u-textdark">
-            <div class="c-feature__itemheader">
-              <div class="c-feature__itemimage">
-                <figure>
-                  <img
-                    src="./assets/img/feature6.jpg"
-                    alt="衣類がハッカ油でよみがえる！？
-                    "
-                  />
-                </figure>
-              </div>
-
-              <div class="c-feature__heading">
-                <h3 class="c-feature__subheading">香りと抗菌のダブルパワー</h3>
-                <h2 class="c-feature__mainheading">
-                  衣類がハッカ油でよみがえる！？
-
-                </h2>
-              </div>
-            </div>
-            <p class="c-feature__itemcontent">ハッカ油の香りと抗菌効果は、衣類の手入れや保管でも力を発揮。洗濯のすすぎ時に数滴混ぜれば部屋干しする際に雑菌の繁殖を抑えてくれるし、匂い袋にしてタンスに入れれば防虫効果も期待できます。身に付ける自分自身はもちろん、お会いする相手のためにも、ハッカ油を使って衣類を気持ちの良い状態に保ちましょう。</p>
-
-            <img class="c-feature__chevron" src="./assets/img/arrow-icon.png" alt="chevron right">
-          </div>
-          <div class="c-feature__item u-textdark">
-            <div class="c-feature__itemheader">
-              <div class="c-feature__itemimage">
-                <figure>
-                  <img
-                    src="./assets/img/feature5.jpg"
-                    alt="ハッカ油スプレーで携帯ハッカ油を始めよう"
-                  />
-                </figure>
-              </div>
-
-              <div class="c-feature__heading">
-                <h3 class="c-feature__subheading">いつでもどこでもサッと使える</h3>
-                <h2 class="c-feature__mainheading">
-                  ハッカ油スプレーで携帯ハッカ油を始めよう
-                </h2>
-              </div>
-            </div>
-            <p class="c-feature__itemcontent">除菌・消臭効果が期待できるハッカ油は、手作りスプレーにして携帯すれば、いろいろなシーンで大活躍。車にこもった嫌な臭い、食事で衣服に付いたきつい匂いも、シュッと一噴きで簡単にリフレッシュ。自然素材だから、小さな子どもを抱っこするママも気持ちよく使えます。万能なハッカ油をしっかり活用してください。</p>
-
-            <img class="c-feature__chevron" src="./assets/img/arrow-icon.png" alt="chevron right">
-          </div>
-          <div class="c-feature__item u-textdark">
-            <div class="c-feature__itemheader">
-              <div class="c-feature__itemimage">
-                <figure>
-                  <img
-                    src="./assets/img/feature4.jpg"
-                    alt="ハッカ油は万能ハウスクリーナー"
-                  />
-                </figure>
-              </div>
-
-              <div class="c-feature__heading">
-                <h3 class="c-feature__subheading">使わないなんてもったいない</h3>
-                <h2 class="c-feature__mainheading">
-                  ハッカ油は万能ハウスクリーナー
-                </h2>
-              </div>
-            </div>
-            <p class="c-feature__itemcontent">自然素材を使って掃除したい人にもハッカ油はおすすめ。除菌・防カビ・消臭効果が期待でき、掃除や食器の手入れにも使えます。炭酸水や重曹に数滴混ぜるだけの簡単クリーナーで、家中ピカピカに磨き上げましょう！ 合成洗剤のように手荒れの心配もなく、何より、さわやかな香りが心地良いため面倒な掃除も頑張れそうです。</p>
-
-            <img class="c-feature__chevron" src="./assets/img/arrow-icon.png" alt="chevron right">
-          </div>
-          <div class="c-feature__item u-textdark">
-            <div class="c-feature__itemheader">
-              <div class="c-feature__itemimage">
-                <figure>
-                  <img
-                    src="./assets/img/feature3.jpg"
-                    alt="風邪やインフルエンザシーズンにもハッカ油"
-                  />
-                </figure>
-              </div>
-
-              <div class="c-feature__heading">
-                <h3 class="c-feature__subheading">おうちでサロン気分</h3>
-                <h2 class="c-feature__mainheading">
-                  ハッカ油で楽しいバスタイム
-                </h2>
-              </div>
-            </div>
-            <p class="c-feature__itemcontent">バスタイムを満喫できるさまざまな入浴剤やバスソルトが市販されていますが、実はハッカ油を入浴剤として使ってもOK。湯上りがさっぱりとして、気分爽快！ またシャンプーやボディーソープに混ぜて使えば、汗でべたべたする頭皮や肌をすっきり引き締めてくれます。ジメジメする梅雨時期や、汗をかく夏場の入浴には特におすすめです。</p>
-
-            <img class="c-feature__chevron" src="./assets/img/arrow-icon.png" alt="chevron right">
-          </div>
-          <div class="c-feature__item u-textdark">
-            <div class="c-feature__itemheader">
-              <div class="c-feature__itemimage">
-                <figure>
-                  <img
-                    src="./assets/img/feature2.jpg"
-                    alt="ハッカ油で上手に生活管理！"
-                  />
-                </figure>
-              </div>
-
-              <div class="c-feature__heading">
-                <h3 class="c-feature__subheading">マスクにシュッシュと一噴き</h3>
-                <h2 class="c-feature__mainheading">
-                  ハッカ油で上手に生活管理！
-                </h2>
-              </div>
-            </div>
-            <p class="c-feature__itemcontent">ハッカ油はマスクにシュッと一噴きすることで生活管理に役立てることができます。体調がすぐれず沈みがちな気分も、清涼感のある香りがリフレッシュしてくれます。ハッカ油を上手に使って、健やかな暮らしを叶えましょう。</p>
-
-            <img class="c-feature__chevron" src="./assets/img/arrow-icon.png" alt="chevron right">
-          </div>
-          <div class="c-feature__item u-textdark">
-            <div class="c-feature__itemheader">
-              <div class="c-feature__itemimage">
-                <figure>
-                  <img
-                    src="./assets/img/feature1.jpg"
-                    alt="さわやかハッカ油で虫除け対策！"
-                  />
-                </figure>
-              </div>
-
-              <div class="c-feature__heading">
-                <h3 class="c-feature__subheading">害虫も怖くない</h3>
-                <h2 class="c-feature__mainheading">
-                  さわやかハッカ油で虫除け対策！
-                </h2>
-              </div>
-            </div>
-            <p class="c-feature__itemcontent">ハッカ油の清涼感ある香りは人間には心地良いですが、多くの害虫は大の苦手。この性質を利用して、安心安全な天然の虫除け剤を手作りしてみましょう。身体に直接湿布するのはもちろん、網戸にシュッと一噴きしたり、キッチンの水回りなどに液剤を染み込ませたコットンを置いたりと、さまざまな用途に使えます。</p>
-
-            <img class="c-feature__chevron" src="./assets/img/arrow-icon.png" alt="chevron right">
-          </div>
+          <% }) %> <% } %>
         </div>
       </div>
     </section>
+  </div>
+
+  <!-- LEAFS -->
+  <div class="c-leafs">
+    <picture>
+      <source media="(max-width: 1024px)" srcset="./assets/img/leaf1-sp.png" />
+      <img src="./assets/img/leaf1.png" alt="Top leaf" class="c-leafs__top" />
+    </picture>
+
+    <picture>
+      <source media="(max-width: 1024px)" srcset="./assets/img/leaf2-sp.png" />
+      <img
+        src="./assets/img/leaf2.png"
+        alt="Side leaf"
+        class="c-leafs__right"
+      />
+    </picture>
+  </div>
+
+  <!-- BUBBLE -->
+  <div class="c-bubble">
+    <img
+      src="./assets/img/bubble1.png"
+      alt="bubble main visual"
+      class="c-bubble__item c-bubble__item1"
+    />
+    <img
+      src="./assets/img/bubble2.png"
+      alt="bubble main visual"
+      class="c-bubble__item c-bubble__item2"
+    />
+    <img
+      src="./assets/img/bubble3.png"
+      alt="bubble main visual"
+      class="c-bubble__item c-bubble__item3"
+    />
+    <img
+      src="./assets/img/bubble4.png"
+      alt="bubble main visual"
+      class="c-bubble__item c-bubble__item4"
+    />
+    <img
+      src="./assets/img/bubble5.png"
+      alt="bubble main visual"
+      class="c-bubble__item c-bubble__item5"
+    />
+    <img
+      src="./assets/img/bubble6.png"
+      alt="bubble main visual"
+      class="c-bubble__item c-bubble__item6"
+    />
   </div>
 </main>
 <!-- @@content -->

@@ -12,7 +12,6 @@
     }
 
     .c-header__navlink {
-        display: block;
         background-image: url("/assets/img/menubg.jpg");
         background-repeat: no-repeat;
         background-size: contain;
@@ -24,6 +23,63 @@
         padding-left: 20px;
         letter-spacing: 1.4px;
     }
+
+    /*------------- HEADER SMART PHONE 
+    --------------------------*/
+    .c-header__toggleopen,
+    .c-header__toggleclose {
+        display: none;
+    }
 }
+
 /* Main menu
 ------------------------------------------------------------*/
+
+@media screen and (max-width: 1024px) {
+    .c-header {
+        width: 100%;
+        height: 0;
+        top: 0;
+        left: 0;
+        overflow: hidden;
+        transition: all 0.5s ease;
+
+        .c-header__nav {
+            background-color: rgb(31, 66, 66);
+            height: 100%;
+            padding-top: 75px;
+        }
+
+        .c-header__navitem {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 80px;
+            margin: 0 15px;
+            border-bottom: 1px solid #3a5656;
+        }
+
+        .c-header__navlink {
+            font-size: 2rem;
+            justify-content: center;
+            text-align: center;
+            background-image: none;
+            background-color: rgb(31, 66, 66);
+        }
+
+        .c-header__toggleopen,
+        .c-header__toggleclose {
+            display: block;
+            position: fixed;
+            color: #fff;
+            top: 15px;
+            left: 15px;
+            width: 45px;
+            height: 45px;
+        }
+
+        .c-header__toggleclose {
+            display: none;
+        }
+    }
+}

@@ -1,0 +1,56 @@
+/*------------------------------------------------------------
+Leaf
+------------------------------------------------------------*/
+
+/*
+------------------------------------------------------------*/
+
+.c-leafs {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 800px;
+    pointer-events: none;
+    z-index: 999;
+
+    .c-leafs__top {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-90%);
+        transition: top 1s ease;
+    }
+
+    
+    .c-leafs__right {
+        position: absolute;
+        top: 58%;
+        right: 0;
+        transform: translateY(4px);
+        transition: right 1s ease;
+
+    }
+
+    .c-leafs__transformtop {
+        top: -50px;
+    }
+
+    .c-leafs__transformright {
+        right: -55px;
+    }
+
+    @media screen and (max-width: 768px) {
+        .c-leafs__top {
+            width: 114px;
+            left: 53%;
+        }
+
+        .c-leafs__right {
+            width: 94px;
+            top: 61%;
+        }
+    }
+}
+
+

@@ -1,5 +1,8 @@
 <header class="c-header">
+  <img class="c-header__toggleopen" src="./assets/img/iconmenu-close.png" alt="toggle menu">
   <nav class="c-header__nav">
+    <!-- HEADER PC -->
+    <img class="c-header__toggleclose" src="./assets/img/iconmenu-open.png" alt="toggle menu">
     <ul>
       <% if (typeof linklists != 'undefined') { %>
         <% linklists.main && linklists.main.forEach(link => { %>
@@ -9,5 +12,5 @@
         <% }) %>
       <% } %>
     </ul>
-  </nav>
+    </nav>
 </header>
