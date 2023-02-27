@@ -18,6 +18,10 @@
     height: 100%;
     object-fit: cover;
     object-position: center bottom;
+
+    @include sp {
+        height: 315px;
+    }
 }
 
 //------------------------------------------------------------
@@ -30,4 +34,8 @@
 
 .u-textdark {
     color: #333;
+}
+
+.u-textleft {
+    text-align: left;
 }

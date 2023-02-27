@@ -7,18 +7,40 @@ footer
 
     .c-footer__container {
         background-color: #fff;
-        padding: 0 30px;
+        padding: 85px 30px 0;
+
+        @include tab {
+            padding: 0 15px;
+        }
+
+        @include sp {
+            padding: 21px 15px 0;
+        }
     }
 
     .c-footer__image {
-        padding-top: 85px;
         text-align: center;
+
+        @include sp {
+            border-radius: 25px;
+            text-align: center;
+            overflow: hidden;
+            margin: 0 32px;
+        }
     }
 
     .c-footer__content {
         padding: 114px 0 64px;
         display: flex;
         justify-content: space-between;
+
+        @include sp {
+            padding: 60px 0 50px;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            row-gap: 30px;
+        }
     }
 
     .c-footer__info {
@@ -26,6 +48,11 @@ footer
         font-size: 1.4rem;
         letter-spacing: 1.4px;
         line-height: 1.7;
+
+@include sp {
+    color: #000;
+    font-size: 1.3rem;
+}
     }
 
     .c-footer__phone {
@@ -42,9 +69,5 @@ footer
 
     @include tab {
         padding: 0 15px 15px;
-
-        .c-footer__container {
-            padding: 0 15px;
-        }
     }
 }

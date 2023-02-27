@@ -13,15 +13,51 @@ usage
     .c-usage__pointblock {
         margin-bottom: 108px;
         padding: 0 15px;
+
+        &:nth-child(2) {
+            .c-usage__summary {
+                padding-right: 20px;
+            }
+        }
+
+        @include sp {
+            margin-bottom: 50px;
+        }
     }
 
     .c-usage__header {
         display: flex;
         padding: 0 0 0 121px;
+
+        @include sp {
+            padding: 0;
+            align-items: center;
+        }
+    }
+
+    .c-usage__summary {
+        display: none;
+        line-height: 1.6;
+
+        @include sp {
+            display: block;
+            font-size: 1.3rem;
+            letter-spacing: 1.3px;
+        }
     }
 
     .c-usage__number {
         margin-right: 27px;
+        @include sp {
+            width: 40px;
+            margin-right: 32px;
+        }
+    }
+
+    .c-usage__numicon {
+        @include sp {
+            transform: translate(9px, 0);
+        }
     }
 
     .c-usage__line {
@@ -30,11 +66,20 @@ usage
         height: 2px;
         margin-top: 18px;
         margin-right: 27px;
+        @include sp {
+            margin-top: 9px;
+            margin-left: 11px;
+        }
     }
 
     .c-usage__label {
         font-size: 2.2rem;
         text-transform: uppercase;
+
+        @include sp {
+            font-size: 1.6rem;
+            transform: translateY(-5px);
+        }
     }
 
     .c-usage__mainheader {
@@ -42,6 +87,12 @@ usage
         line-height: 1.22;
         letter-spacing: 3.6px;
         margin-bottom: 18px;
+
+        @include sp {
+            font-size: 2rem;
+            letter-spacing: 2px;
+            margin-bottom: 9px;
+        }
     }
 
     .c-usage__subheader {
@@ -49,6 +100,10 @@ usage
         line-height: 1.5;
         margin-top: 5px;
         margin-left: 3px;
+
+        @include sp {
+            display: none;
+        }
     }
 
     .c-usage__images {
@@ -61,6 +116,7 @@ usage
             justify-content: center;
             align-items: center;
             row-gap: 20px;
+            margin-top: 22px;
         }
     }
 
@@ -71,6 +127,12 @@ usage
         border-radius: 30px;
         background-color: rgb(175, 212, 211);
         overflow: hidden;
+
+        @include sp {
+            border-radius: 15px;
+            flex: 1 1 315px;
+            transform: translateY(-2px);
+        }
     }
 
     .c-usage__viewmore {
@@ -84,20 +146,31 @@ usage
         &:hover {
             opacity: 0.7;
         }
+
+        @include sp {
+            width: 61px;
+            bottom: 17px;
+            right: 16px;
+        }
     }
 
-    .c-usage__imageconent {
+    .c-usage__imagecontent {
         position: absolute;
         border-radius: 26px;
         background-color: rgba(255, 255, 255, 0.8);
         width: 87.8%;
         height: 87.8%;
-
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
         display: none;
         z-index: 11;
+
+        @include sp {
+            width: 90.8%;
+            height: 90.8%;
+            border-radius: 13px;
+        }
     }
 
     .c-usage__imagecontainer {
@@ -108,12 +181,21 @@ usage
         height: 100%;
         width: 100%;
         padding: 0 45px;
+        @include sp {
+            padding: 0 20px;
+        }
     }
 
     .c-usage__imgheader {
         font-size: 2.4rem;
         letter-spacing: 2.4px;
         line-height: 1;
+        @include sp {
+            font-size: 1.6rem;
+            letter-spacing: 1.6px;
+        }
+
+      
     }
 
     .c-usage__imgline {
@@ -121,6 +203,10 @@ usage
         height: 1px;
         background-color: rgb(23, 107, 106);
         margin-top: 17px;
+        @include sp {
+            margin: 28px 0;
+            transform: translateY(-5px);
+        }
     }
 
     .c-usage__imgdes {
@@ -130,6 +216,12 @@ usage
         font-feature-settings: "palt";
         margin-top: 2px;
         text-align: left;
+
+        @include sp {
+            font-size: 1.3rem;
+            margin-top: 2px;
+            transform: translate(0, -15px);
+        }
     }
 
     .c-usage__imglink {
@@ -144,19 +236,39 @@ usage
         font-size: 1.6rem;
         color: #fff;
         letter-spacing: 1.6px;
+
+        @include sp {
+            font-size: 1.3rem;
+            width: 130px;
+            height: 26px;
+            margin-top: 0;
+            margin-right: 2px;
+        }
     }
 
     // Brand and how to buy
     .c-usage__bottom {
-        padding: 0 15px;
+        padding: 0 10px;
+
+        .c-usage__headerbottom--marginleft {
+            margin-left: -10px;
+        }
+        @include sp {
+            margin-top: -20px;
+        }
     }
 
-    .c-usage__headerbot {
+    .c-usage__headerbottom {
         font-size: 3rem;
         letter-spacing: 3px;
         text-align: center;
         line-height: 1.2;
-        transform: translate(-1px, -1px);
+        transform: translate(0, -1px);
+        @include sp {
+            font-size: 1.8rem;
+            line-height: 1.7;
+            letter-spacing: 1.7px;
+        }
     }
 
     .c-usage__brands {
@@ -165,11 +277,23 @@ usage
         column-gap: 20px;
         max-width: 1120px;
         margin: 44px auto 0;
+        @include sp {
+            flex-wrap: wrap;
+            justify-content: space-around;
+            column-gap: 0;
+            row-gap: 25px;
+            margin-top: 22px;
+        }
     }
 
     .c-usage__brandlogo {
         height: 110px;
         display: block;
+
+        @include sp {
+            width: 130px;
+            height: 55px;
+        }
     }
 
     .c-usage__brandweb {
@@ -178,9 +302,32 @@ usage
         color: #333;
         text-align: center;
         margin-top: 47px;
+
+        @include sp {
+            display: none;
+        }
+    }
+
+    .c-usage__brandwebsmartphone {
+        display: none;
+        @include sp {
+            display: block;
+            font-size: 1.3rem;
+            letter-spacing: 1.3px;
+            color: #333;
+            text-align: center;
+            margin-top: 20px;
+            line-height: 1.6;
+        }
     }
 
     .is-showContent {
         display: block;
+    }
+
+    @include sp {
+        margin-top: 75px;
+        padding-top: 38px;
+        padding-bottom: 57px;
     }
 }

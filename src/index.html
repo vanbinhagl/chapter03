@@ -57,68 +57,90 @@
               />
               <img
                 class="c-product__image"
-                src="/assets/img/pro1.png"
+                src="./assets/img/pro1.png"
                 alt="ハッカ水"
               />
             </picture>
             <span class="c-product__label">ハッカ水</span>
           </a>
           <a href="#" class="c-product__item">
-            <img
+            <picture> 
+              <source media="(max-width: 767px)" srcset="./assets/img/pro2-sp.png">
+              <img
               class="c-product__image"
-              src="/assets/img/pro2.png"
+              src="./assets/img/pro2.png"
               alt="ハッカ水"
-            />
+              />
+            </picture>
             <span class="c-product__label">ハッカの虫除けスプレー</span>
           </a>
           <a href="#" class="c-product__item">
-            <img
+            <picture>
+              <source media="(max-width: 767px)" srcset="./assets/img/pro3-sp.png">
+              <img
               class="c-product__image"
-              src="/assets/img/pro3.png"
+              src="./assets/img/pro3.png"
               alt="ハッカ水"
-            />
+              />
+            </picture>
             <span class="c-product__label">ハッカのリネンウォーター</span>
           </a>
           <a href="#" class="c-product__item">
-            <img
+            <picture>
+              <source media="(max-width: 767px)" srcset="./assets/img/pro4-sp.png">
+              <img
               class="c-product__image"
-              src="/assets/img/pro4.png"
+              src="./assets/img/pro4.png"
               alt="ハッカ水"
-            />
+              />
+            </picture>
             <span class="c-product__label">ハッカのエアフレッシュナー</span>
           </a>
         </div>
         <div class="c-product__listbottom">
           <a href="#" class="c-product__item">
-            <img
+            <picture>
+              <source media="(max-width: 767px)" srcset="./assets/img/pro5-sp.png">
+              <img
               class="c-product__image"
-              src="/assets/img/pro5.png"
+              src="./assets/img/pro5.png"
               alt="ハッカ水"
-            />
+              />
+            </picture>
             <span class="c-product__label">ハッカの清涼スプレー</span>
           </a>
           <a href="#" class="c-product__item">
-            <img
+            <picture>
+              <source media="(max-width: 767px)" srcset="./assets/img/pro6-sp.png">
+              <img
               class="c-product__image"
               src="/assets/img/pro6.png"
               alt="ハッカ水"
-            />
+              />
+            </picture>
             <span class="c-product__label">ハッカマスク</span>
           </a>
           <a href="#" class="c-product__item">
-            <img
+            
+            <picture>
+              <source media="(max-width: 767px)" srcset="./assets/img/pro7-sp.png">
+              <img
               class="c-product__image"
               src="/assets/img/pro7.png"
               alt="ハッカ水"
-            />
+              />
+            </picture>
             <span class="c-product__label">ハッカで安息</span>
           </a>
           <a href="#" class="c-product__item">
-            <img
+            <picture>
+              <source media="(max-width: 767px)" srcset="./assets/img/pro8-sp.png">
+              <img
               class="c-product__image"
               src="/assets/img/pro8.png"
               alt="ハッカ水"
-            />
+              />
+            </picture>
             <span class="c-product__label">ハッカの入浴剤</span>
           </a>
         </div>
@@ -128,16 +150,16 @@
     <!-- USAGE -->
 
     <section class="c-usage" id="usage">
-      <div class="c-usage__content l-container l-container--1060">
+      <div class="c-usage__content l-container l-container--w1060">
         <% if(typeof usage !== 'undefined') { %> <% usage.main && usage.main.forEach((element, index) => { %>
         <div class="c-usage__pointblock">
           <div class="c-usage__header">
             <div class="c-usage__number">
-              <img src="<%= element.header.icon %>" alt="<%= "number"+index %>"/>
+              <img src="<%= element.header.icon %>" alt="<%= "number"+index %>" class="c-usage__numicon"/>
               <hr class="c-usage__line" />
               <p class="c-usage__label">point</p>
             </div>
-            <div class="c-usage__headercontent">
+            <div class="c-usage__headcontent">
               <h2 class="c-usage__mainheader u-textblue">
                 <%= element.header.mainHeader %>
               </h2>
@@ -149,21 +171,28 @@
               </p>
             </div>
           </div>
-
+          <p class="c-usage__summary">
+            <%= element.header.subHeader.first +   element.header.subHeader.second %>
+          </p>
           <div class="c-usage__images">
             <% element.content.forEach(el => { %>
             <div class="c-usage__imageitem">
-              <img
-                class="u-imgfulfill"
-                src="<%=el.image %>"
-                alt="<%= el.mainHeader %>"
-              />
+              <picture>
+                <% if (el.imageSp) { %>
+                 <source media="(max-width: 767px)" srcset="<%= el.imageSp %>">
+                <% } %>
+                <img
+                  class="u-imgfulfill"
+                  src="<%=el.image %>"
+                  alt="<%= el.mainHeader %>"
+                />
+              </picture>
               <img
                 class="c-usage__viewmore"
                 src="./assets/img/btn_more.png"
                 alt="btn_more"
               />
-              <div class="c-usage__imageconent">
+              <div class="c-usage__imagecontent">
                 <div class="c-usage__imagecontainer">
                   <h3 class="c-usage__imgheader u-textblue">
                     <%= el.mainHeader %>
@@ -181,16 +210,19 @@
       </div>
 
       <div class="c-usage__bottom l-container">
-        <h4 class="c-usage__headerbot u-textblue">
-          お買い求めは全国のドラッグストア、またはこちらから
+        <h4 class="c-usage__headerbottom u-textblue">
+          お買い求めは全国のドラッグストア<span class="c-usage__headerbottom--marginleft"> 、またはこちらから</span>
         </h4>
         <div class="c-usage__brands">
           <% if(typeof partner !== 'undefined') {%> <% partner.forEach(item => {%>
           <a href="#" target="_blank" class="c-usage__brandlogo">
-            <img
+            <picture>
+              <source media="(max-width: 767px)" srcset="<%= item.imageSp %>">
+              <img
               src="<%= item.image %>"
               alt="お買い求めは全国のドラッグストア、またはこちらから"
-            />
+              />
+            </picture>
           </a>
           <% }) %> <%}%>
         </div>
@@ -199,18 +231,21 @@
           Amazon、Amazon.co.jp、及びAmazon.co.jpロゴはAmazon.com,
           Inc.又はその関連会社の商標です。
         </p>
+        <p class="c-usage__brandwebsmartphone">
+          Amazon、Amazon.co.jp、及びAmazon.co.-jpロゴはAmazon.com, Inc.又はその関連会社の商標です。
+        </p>
       </div>
     </section>
 
     <!-- Q&A -->
-    <section class="c-qa l-container l-container--min" id="q&a">
+    <section class="c-qa l-container l-container--w1030" id="q&a">
       <div class="c-qa__container">
         <h2 class="c-qa__header u-textblue">Q&A</h2>
         <dl class="c-qa__content">
           <% if (typeof questionList !== 'undefined' ) { %> <%questionList.forEach(item => { %>
           <div class="c-qa__questionitem">
             <dt class="c-qa__question">
-              <img src="./assets/img/question_icon.png" alt="Q&A" />
+                <img src="./assets/img/question_icon.png" alt="Q&A" class="c-qa__questionicon" />
               <h3 class="c-qa__questioncontent u-textblue">
                 <%= item.question %>
               </h3>
@@ -224,15 +259,16 @@
 
     <!-- FEATURE -->
     <section class="feature" id="feature">
-      <div class="feature__content l-container l-container--1060">
+      <div class="feature__content l-container l-container--w1060">
         <div class="c-feature__imgcontainer">
-          <figure>
-            <img
-              class="c-feature__img"
-              src="./assets/img/feature-banner.jpg"
-              alt="「ハッカ油コラム」へ"
-            />
-          </figure>
+            <picture>
+              <source media="(max-width: 767px)" srcset="./assets/img/feature-banner-sp.jpg">
+              <img
+                class="c-feature__img"
+                src="./assets/img/feature-banner.jpg"
+                alt="「ハッカ油コラム」へ"
+              />
+            </picture>
         </div>
 
         <div class="c-feature__body">
@@ -241,24 +277,38 @@
           <div class="c-feature__item u-textdark">
             <a href="#">
               <div class="c-feature__itemheader">
-                <div class="c-feature__itemimage">
-                  <img src="<%= item.image %>" alt="<%= item.mainHeading %>" />
-                </div>
-                <div class="c-feature__heading">
-                  <h3 class="c-feature__subheading"><%= item.subHeading %></h3>
-                  <h2 class="c-feature__mainheading">
-                    <%= item.mainHeading %>
-                  </h2>
-                </div>
-              </div>
-              <p class="c-feature__itemcontent"><%= item.content %></p>
+                  <div class="c-feature__itemimage">
+                    <picture>
+                      <source media="(max-width: 767px)" srcset="<%= item.imageSp %>">
+                      <img src="<%= item.image %>" alt="<%= item.mainHeading %>" />
+                    </picture>
 
-              <img
-                class="c-feature__chevron"
-                src="./assets/img/arrow-icon.png"
-                alt="chevron right"
-              />
+                  </div>
+                  <div class="c-feature__heading u-textleft">
+                    <h3 class="c-feature__subheading"><%= item.subHeading %></h3>
+                    <h2 class="c-feature__mainheading">
+                      <%= item.mainHeading %>
+                    </h2>
+                  </div>
+              </div>
             </a>
+            <div class="c-feature__itemcontent">
+              <p class="u-textleft"><%= item.content %></p>
+              <a class="c-feature__link u-textblue" href="#">詳しく見る</a>
+            </div>
+            <img
+              class="c-feature__chevron"
+              src="./assets/img/arrow-icon.png"
+              alt="chevron right"
+            />
+
+            <div class="c-feature__expand">
+              <img
+              class="c-feature__expandicon"
+              src="./assets/img/expand-icon.png"
+              alt="expand icon"
+              />
+            </div>
           </div>
           <% }) %> <% } %>
         </div>

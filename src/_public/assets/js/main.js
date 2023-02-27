@@ -3,11 +3,11 @@ $(function () {
     $(this)
       .parent()
       .parent()
-      .find(".c-usage__imageconent")
+      .parent()
+      .find(".c-usage__imagecontent")
       .removeClass("is-showContent");
-    $(this).parent().find(".c-usage__imageconent").addClass("is-showContent");
+    $(this).parent().find(".c-usage__imagecontent").addClass("is-showContent");
   });
-
   // Animation
   $(window).scroll(function () {
     const scrollTop = 100;
@@ -39,4 +39,13 @@ $(function () {
     $(".c-header").css("height", "100%");
     $(".c-header__toggleclose").css("display", "block");
   });
+
+  // Handle expand feature
+
+
+  $(".c-feature__expand").click(function(){
+    $(".c-feature__item").not($(this).parent()).removeClass('is-showFeatureContent')
+
+    $(this).parent().toggleClass('is-showFeatureContent')
+  })
 });
